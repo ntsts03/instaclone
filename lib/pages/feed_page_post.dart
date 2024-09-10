@@ -20,97 +20,148 @@ class Post extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        //1つ目の投稿
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Image.network(
-                images[0],
-                fit: BoxFit.cover,
+       Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Image.network(
+                    'https://img.icons8.com/?size=100&id=32323&format=png&color=000000',
+                    width: 60,
+                    height: 60,
+                  ),
+                  const SizedBox(width: 10),
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text('instagram'),
+                          Icon(Icons.verified, size: 16),
+                        ],
+                      ),
+                      Text('Tokyo'),
+                    ],
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            ),
+//投稿1
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.network(
+                    images[0],
+                    fit: BoxFit.cover,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Icon(Icons.favorite_border),
-                            SizedBox(width: 4),
-                            Icon(Icons.chat_bubble_outline),
-                            SizedBox(width: 4),
-                            Icon(Icons.send),
+                            Row(
+                              children: [
+                                Icon(Icons.favorite_border),
+                                SizedBox(width: 4),
+                                Icon(Icons.chat_bubble_outline),
+                                SizedBox(width: 4),
+                                Icon(Icons.send),
+                              ],
+                            ),
+                            Icon(Icons.more_horiz),
+                            Icon(Icons.bookmark_border),
                           ],
                         ),
-                        Icon(Icons.more_horiz),
-                        Icon(Icons.bookmark_border),
+                        Text(
+                          '「いいね！」 ${favorites[0]}件',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          texts[0],
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ],
                     ),
-                    Text(
-                      '「いいね！」 ${favorites[0]}件',
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      texts[0],
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
-        ),
-
-        //2つ目の投稿
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Image.network(
-                images[1],
-                fit: BoxFit.cover,
+            ),
+            //ここまで投稿
+//2つ目
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Image.network(
+                    'https://img.icons8.com/?size=100&id=32323&format=png&color=000000',
+                    width: 60,
+                    height: 60,
+                  ),
+                  const SizedBox(width: 10),
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text('instagram'),
+                          Icon(Icons.verified, size: 16),
+                        ],
+                      ),
+                      Text('Tokyo'),
+                    ],
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.network(
+                    images[1],
+                    fit: BoxFit.cover,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Icon(Icons.favorite_border),
-                            SizedBox(width: 4),
-                            Icon(Icons.chat_bubble_outline),
-                            SizedBox(width: 4),
-                            Icon(Icons.send),
+                            Row(
+                              children: [
+                                Icon(Icons.favorite_border),
+                                SizedBox(width: 4),
+                                Icon(Icons.chat_bubble_outline),
+                                SizedBox(width: 4),
+                                Icon(Icons.send),
+                              ],
+                            ),
+                            Icon(Icons.more_horiz),
+                            Icon(Icons.bookmark_border),
                           ],
                         ),
-                        Icon(Icons.more_horiz),
-                        Icon(Icons.bookmark_border),
+                        Text(
+                          '「いいね！」 ${favorites[1]}件',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          texts[1],
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ],
                     ),
-                    Text(
-                      '「いいね！」 ${favorites[1]}件',
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      texts[1],
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
-        ),
+            ),
+            //ここまで投稿
 
       ],
     );
